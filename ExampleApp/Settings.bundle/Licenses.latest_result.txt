@@ -1,0 +1,5 @@
+name: LicensePlistPlugin, nameSpecified: LicensePlistPlugin, owner: alandeguz, version: 0.1.0, source: https://github.com/alandeguz/LicensePlistPlugin
+
+add-version-numbers: false
+
+LicensePlist Version: 3.23.4

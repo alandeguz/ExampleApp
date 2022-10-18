@@ -150,6 +150,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E09894D028FE3C8D0002103F /* PBXTargetDependency */,
 			);
 			name = ExampleApp;
 			productName = ExampleApp;
@@ -224,6 +225,9 @@
 				Base,
 			);
 			mainGroup = E0BC13A328FE0FDF002BAF2D;
+			packageReferences = (
+				E09894CE28FE3C800002103F /* XCRemoteSwiftPackageReference "LicensePlistPlugin" */,
+			);
 			productRefGroup = E0BC13AD28FE0FDF002BAF2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -292,6 +296,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E09894D028FE3C8D0002103F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = E09894CF28FE3C8D0002103F /* LicensePlist */;
+		};
 		E0BC13BF28FE0FE2002BAF2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E0BC13AB28FE0FDF002BAF2D /* ExampleApp */;
@@ -620,6 +628,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E09894CE28FE3C800002103F /* XCRemoteSwiftPackageReference "LicensePlistPlugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alandeguz/LicensePlistPlugin";
+			requirement = {
+				kind = exactVersion;
+				version = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E09894CF28FE3C8D0002103F /* LicensePlist */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E09894CE28FE3C800002103F /* XCRemoteSwiftPackageReference "LicensePlistPlugin" */;
+			productName = "plugin:LicensePlist";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E0BC13A428FE0FDF002BAF2D /* Project object */;
 }

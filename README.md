@@ -6,6 +6,10 @@
 ![Platform: iOS 14.0+ macOS 12.4+](https://img.shields.io/badge/target-iOS%2013.7%2B%20macOS%2012.4%2B-blue.svg?style=flat)
 
 * [Summary](#summary)
+* [LicensePlistPlugin](#licenseplistplugin)
 
 ## Summary
 This is an SwiftUI app, defined in Xcode, used to demonstrate specific implementations of other Githuub projects.
+
+## LicensePlistPlugin
+The app implements [LicensePlistPlugin](https://github.com/alandeguz/LicensePlistPlugin) to automatically add license information (for all dependencies) to the `Settings.bundle`.
