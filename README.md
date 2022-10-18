@@ -7,9 +7,13 @@
 
 * [Summary](#summary)
 * [LicensePlistPlugin](#licenseplistplugin)
+* [SwiftLintPlugin](#swiftlintplugin)
 
 ## Summary
 This is an SwiftUI app, defined in Xcode, used to demonstrate specific implementations of other Githuub projects.
 
 ## LicensePlistPlugin
 The app implements [LicensePlistPlugin](https://github.com/alandeguz/LicensePlistPlugin) to automatically add license information (for all dependencies) to the `Settings.bundle`.
+
+## SwiftLintPlugin
+The app implements [SwiftLintPlugin](https://github.com/alandeguz/SwiftLintPlugin) as a linter for common Swift issue.

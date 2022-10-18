@@ -150,6 +150,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E040B65828FE5EFE00EEC909 /* PBXTargetDependency */,
 				E09894D028FE3C8D0002103F /* PBXTargetDependency */,
 			);
 			name = ExampleApp;
@@ -227,6 +228,7 @@
 			mainGroup = E0BC13A328FE0FDF002BAF2D;
 			packageReferences = (
 				E09894CE28FE3C800002103F /* XCRemoteSwiftPackageReference "LicensePlistPlugin" */,
+				E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */,
 			);
 			productRefGroup = E0BC13AD28FE0FDF002BAF2D /* Products */;
 			projectDirPath = "";
@@ -296,6 +298,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E040B65828FE5EFE00EEC909 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = E040B65728FE5EFE00EEC909 /* SwiftLint */;
+		};
 		E09894D028FE3C8D0002103F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = E09894CF28FE3C8D0002103F /* LicensePlist */;
@@ -630,6 +636,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alandeguz/SwiftLintPlugin";
+			requirement = {
+				kind = exactVersion;
+				version = 0.1.0;
+			};
+		};
 		E09894CE28FE3C800002103F /* XCRemoteSwiftPackageReference "LicensePlistPlugin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alandeguz/LicensePlistPlugin";
@@ -641,6 +655,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E040B65728FE5EFE00EEC909 /* SwiftLint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */;
+			productName = "plugin:SwiftLint";
+		};
 		E09894CF28FE3C8D0002103F /* LicensePlist */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E09894CE28FE3C800002103F /* XCRemoteSwiftPackageReference "LicensePlistPlugin" */;
