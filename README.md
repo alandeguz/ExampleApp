@@ -8,6 +8,7 @@
 * [Summary](#summary)
 * [LicensePlistPlugin](#licenseplistplugin)
 * [SwiftLintPlugin](#swiftlintplugin)
+* [RswiftPlugin](#rswiftplugin)
 
 ## Summary
 This is an SwiftUI app, defined in Xcode, used to demonstrate specific implementations of other Githuub projects.
@@ -17,3 +18,6 @@ The app implements [LicensePlistPlugin](https://github.com/alandeguz/LicensePlis
 
 ## SwiftLintPlugin
 The app implements [SwiftLintPlugin](https://github.com/alandeguz/SwiftLintPlugin) as a linter for common Swift issue.
+
+## RswiftPlugin
+The app implements [RswiftPlugin](https://github.com/alandeguz/RswiftPlugin) to generate static references to Xcode resources.

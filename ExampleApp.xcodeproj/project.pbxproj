@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E037125529019FAF00B84E31 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = E037125429019FAF00B84E31 /* Rswift */; };
 		E08357F228FEF2FC00554E60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E08357F428FEF2FC00554E60 /* Localizable.strings */; };
+		E08357F928FEFB9F00554E60 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08357F828FEFB9F00554E60 /* R.generated.swift */; };
 		E09894C928FE3A0D0002103F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E09894C828FE3A0D0002103F /* Settings.bundle */; };
 		E0BC13B028FE0FDF002BAF2D /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BC13AF28FE0FDF002BAF2D /* ExampleApp.swift */; };
 		E0BC13B228FE0FDF002BAF2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BC13B128FE0FDF002BAF2D /* ContentView.swift */; };
@@ -36,8 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E08129B82902DFF20036D826 /* rswift-config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rswift-config.plist"; sourceTree = "<group>"; };
 		E08357F328FEF2FC00554E60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E08357F528FEF34600554E60 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E08357F828FEFB9F00554E60 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		E09894C828FE3A0D0002103F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E09894CA28FE3A520002103F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E09894CB28FE3A520002103F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E037125529019FAF00B84E31 /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +87,7 @@
 		E0BC13A328FE0FDF002BAF2D = {
 			isa = PBXGroup;
 			children = (
+				E08129B82902DFF20036D826 /* rswift-config.plist */,
 				E09894CB28FE3A520002103F /* LICENSE */,
 				E09894CA28FE3A520002103F /* README.md */,
 				E0BC13AE28FE0FDF002BAF2D /* ExampleApp */,
@@ -104,6 +110,7 @@
 		E0BC13AE28FE0FDF002BAF2D /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				E08357F828FEFB9F00554E60 /* R.generated.swift */,
 				E0BC13AF28FE0FDF002BAF2D /* ExampleApp.swift */,
 				E0BC13B128FE0FDF002BAF2D /* ContentView.swift */,
 				E0BC13B328FE0FE2002BAF2D /* Assets.xcassets */,
@@ -154,10 +161,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				E08129B72902DF630036D826 /* PBXTargetDependency */,
 				E040B65828FE5EFE00EEC909 /* PBXTargetDependency */,
 				E09894D028FE3C8D0002103F /* PBXTargetDependency */,
 			);
 			name = ExampleApp;
+			packageProductDependencies = (
+				E037125429019FAF00B84E31 /* Rswift */,
+			);
 			productName = ExampleApp;
 			productReference = E0BC13AC28FE0FDF002BAF2D /* ExampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +245,8 @@
 			packageReferences = (
 				E09894CE28FE3C800002103F /* XCRemoteSwiftPackageReference "LicensePlistPlugin" */,
 				E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */,
+				E037125329019FAF00B84E31 /* XCRemoteSwiftPackageReference "R.swift" */,
+				E08129B52902DF510036D826 /* XCRemoteSwiftPackageReference "RswiftPlugin" */,
 			);
 			productRefGroup = E0BC13AD28FE0FDF002BAF2D /* Products */;
 			projectDirPath = "";
@@ -281,6 +294,7 @@
 			files = (
 				E0BC13B228FE0FDF002BAF2D /* ContentView.swift in Sources */,
 				E0BC13B028FE0FDF002BAF2D /* ExampleApp.swift in Sources */,
+				E08357F928FEFB9F00554E60 /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +321,10 @@
 		E040B65828FE5EFE00EEC909 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = E040B65728FE5EFE00EEC909 /* SwiftLint */;
+		};
+		E08129B72902DF630036D826 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = E08129B62902DF630036D826 /* RswiftExec */;
 		};
 		E09894D028FE3C8D0002103F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -479,7 +497,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.ExampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -517,7 +537,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.ExampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -656,9 +678,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E037125329019FAF00B84E31 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = exactVersion;
+				version = 5.4.0;
+			};
+		};
 		E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alandeguz/SwiftLintPlugin";
+			requirement = {
+				kind = exactVersion;
+				version = 0.1.0;
+			};
+		};
+		E08129B52902DF510036D826 /* XCRemoteSwiftPackageReference "RswiftPlugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alandeguz/RswiftPlugin";
 			requirement = {
 				kind = exactVersion;
 				version = 0.1.0;
@@ -675,10 +713,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E037125429019FAF00B84E31 /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E037125329019FAF00B84E31 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
 		E040B65728FE5EFE00EEC909 /* SwiftLint */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */;
 			productName = "plugin:SwiftLint";
+		};
+		E08129B62902DF630036D826 /* RswiftExec */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E08129B52902DF510036D826 /* XCRemoteSwiftPackageReference "RswiftPlugin" */;
+			productName = "plugin:RswiftExec";
 		};
 		E09894CF28FE3C8D0002103F /* LicensePlist */ = {
 			isa = XCSwiftPackageProductDependency;

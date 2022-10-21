@@ -1,5 +1,9 @@
 name: LicensePlistPlugin, nameSpecified: LicensePlistPlugin, owner: alandeguz, version: 0.1.0, source: https://github.com/alandeguz/LicensePlistPlugin
 
+name: R.swift.Library, nameSpecified: R.swift.Library, owner: mac-cain13, version: 5.4.0, source: https://github.com/mac-cain13/R.swift.Library
+
+name: RswiftPlugin, nameSpecified: RswiftPlugin, owner: alandeguz, version: 0.1.0, source: https://github.com/alandeguz/RswiftPlugin
+
 name: SwiftLintPlugin, nameSpecified: SwiftLintPlugin, owner: alandeguz, version: 0.1.0, source: https://github.com/alandeguz/SwiftLintPlugin
 
 add-version-numbers: false
