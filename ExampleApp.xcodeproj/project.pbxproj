@@ -661,7 +661,7 @@
 			repositoryURL = "https://github.com/alandeguz/SwiftLintPlugin";
 			requirement = {
 				kind = exactVersion;
-				version = 0.1.0;
+				version = 0.2.0;
 			};
 		};
 		E09894CE28FE3C800002103F /* XCRemoteSwiftPackageReference "LicensePlistPlugin" */ = {
