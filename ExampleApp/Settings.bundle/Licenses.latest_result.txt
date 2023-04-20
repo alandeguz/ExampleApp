@@ -1,6 +1,12 @@
 name: LicensePlistPlugin, nameSpecified: LicensePlistPlugin, owner: alandeguz, version: 0.2.0, source: https://github.com/alandeguz/LicensePlistPlugin
 
-name: SwiftLintPlugin, nameSpecified: SwiftLintPlugin, owner: alandeguz, version: 0.1.0, source: https://github.com/alandeguz/SwiftLintPlugin
+name: R.swift, nameSpecified: Rswift, owner: mac-cain13, version: 7.3.2, source: https://github.com/mac-cain13/R.swift
+
+name: swift-argument-parser, nameSpecified: swift-argument-parser, owner: apple, version: 1.2.2, source: https://github.com/apple/swift-argument-parser
+
+name: SwiftLintPlugin, nameSpecified: SwiftLintPlugin, owner: alandeguz, version: 0.2.0, source: https://github.com/alandeguz/SwiftLintPlugin
+
+name: XcodeEdit, nameSpecified: XcodeEdit, owner: tomlokhorst, version: 2.9.0, source: https://github.com/tomlokhorst/XcodeEdit
 
 add-version-numbers: false
 
