@@ -155,8 +155,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				E0F09F4A2B2CBD4F00C8BCDF /* PBXTargetDependency */,
 				E036E5CF2B2C0BDA009C4257 /* PBXTargetDependency */,
-				E040B65828FE5EFE00EEC909 /* PBXTargetDependency */,
 			);
 			name = ExampleApp;
 			packageProductDependencies = (
@@ -235,8 +235,8 @@
 			);
 			mainGroup = E0BC13A328FE0FDF002BAF2D;
 			packageReferences = (
-				E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */,
 				E036E5CD2B2C0BC7009C4257 /* XCRemoteSwiftPackageReference "LicensePlist" */,
+				E0F09F482B2CBD4300C8BCDF /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = E0BC13AD28FE0FDF002BAF2D /* Products */;
 			projectDirPath = "";
@@ -331,10 +331,6 @@
 			isa = PBXTargetDependency;
 			productRef = E036E5CE2B2C0BDA009C4257 /* LicensePlistBuildTool */;
 		};
-		E040B65828FE5EFE00EEC909 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = E040B65728FE5EFE00EEC909 /* SwiftLint */;
-		};
 		E0BC13BF28FE0FE2002BAF2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E0BC13AB28FE0FDF002BAF2D /* ExampleApp */;
@@ -344,6 +340,10 @@
 			isa = PBXTargetDependency;
 			target = E0BC13AB28FE0FDF002BAF2D /* ExampleApp */;
 			targetProxy = E0BC13C828FE0FE2002BAF2D /* PBXContainerItemProxy */;
+		};
+		E0F09F4A2B2CBD4F00C8BCDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = E0F09F492B2CBD4F00C8BCDF /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -687,12 +687,12 @@
 				version = 3.25.1;
 			};
 		};
-		E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */ = {
+		E0F09F482B2CBD4300C8BCDF /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/alandeguz/SwiftLintPlugin";
+			repositoryURL = "https://github.com/alandeguz/SwiftLint.git";
 			requirement = {
 				kind = exactVersion;
-				version = 0.5.0;
+				version = 0.54.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -703,10 +703,10 @@
 			package = E036E5CD2B2C0BC7009C4257 /* XCRemoteSwiftPackageReference "LicensePlist" */;
 			productName = "plugin:LicensePlistBuildTool";
 		};
-		E040B65728FE5EFE00EEC909 /* SwiftLint */ = {
+		E0F09F492B2CBD4F00C8BCDF /* SwiftLintPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */;
-			productName = "plugin:SwiftLint";
+			package = E0F09F482B2CBD4300C8BCDF /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
