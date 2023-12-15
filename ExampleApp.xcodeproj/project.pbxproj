@@ -147,6 +147,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0BC13D128FE0FE2002BAF2D /* Build configuration list for PBXNativeTarget "ExampleApp" */;
 			buildPhases = (
+				E036E5D02B2C118C009C4257 /* ShellScript */,
 				E0BC13A828FE0FDF002BAF2D /* Sources */,
 				E0BC13A928FE0FDF002BAF2D /* Frameworks */,
 				E0BC13AA28FE0FDF002BAF2D /* Resources */,
@@ -154,10 +155,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				E036E5CF2B2C0BDA009C4257 /* PBXTargetDependency */,
 				E040B65828FE5EFE00EEC909 /* PBXTargetDependency */,
-				E09894D028FE3C8D0002103F /* PBXTargetDependency */,
 			);
 			name = ExampleApp;
+			packageProductDependencies = (
+			);
 			productName = ExampleApp;
 			productReference = E0BC13AC28FE0FDF002BAF2D /* ExampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -232,8 +235,8 @@
 			);
 			mainGroup = E0BC13A328FE0FDF002BAF2D;
 			packageReferences = (
-				E09894CE28FE3C800002103F /* XCRemoteSwiftPackageReference "LicensePlistPlugin" */,
 				E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */,
+				E036E5CD2B2C0BC7009C4257 /* XCRemoteSwiftPackageReference "LicensePlist" */,
 			);
 			productRefGroup = E0BC13AD28FE0FDF002BAF2D /* Products */;
 			projectDirPath = "";
@@ -274,6 +277,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E036E5D02B2C118C009C4257 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Will copy acknowledgements\"\nACKNOWLEDGEMENTS_DIR=${BUILT_PRODUCTS_DIR}/${CONTENTS_FOLDER_PATH}/com.mono0926.LicensePlist.Output\nDESTINATION_PATH=${SOURCE_ROOT}/ExampleApp/Settings.bundle/\n# copy withouut error\ncp \"${ACKNOWLEDGEMENTS_DIR}\"/Licenses/* \"${DESTINATION_PATH}\"/Licenses 2>/dev/null || :\ncp \"${ACKNOWLEDGEMENTS_DIR}\"/Licenses.* \"${DESTINATION_PATH}\" 2>/dev/null || :\nrm -rf \"${ACKNOWLEDGEMENTS_DIR}\" 2>/dev/null || :\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E0BC13A828FE0FDF002BAF2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -304,13 +327,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E036E5CF2B2C0BDA009C4257 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = E036E5CE2B2C0BDA009C4257 /* LicensePlistBuildTool */;
+		};
 		E040B65828FE5EFE00EEC909 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = E040B65728FE5EFE00EEC909 /* SwiftLint */;
-		};
-		E09894D028FE3C8D0002103F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = E09894CF28FE3C8D0002103F /* LicensePlist */;
 		};
 		E0BC13BF28FE0FE2002BAF2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -457,7 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExampleApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 87XQ93JZ88;
+				DEVELOPMENT_TEAM = XRMPYW8QVN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -495,7 +518,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExampleApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 87XQ93JZ88;
+				DEVELOPMENT_TEAM = XRMPYW8QVN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -656,6 +679,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E036E5CD2B2C0BC7009C4257 /* XCRemoteSwiftPackageReference "LicensePlist" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alandeguz/LicensePlist";
+			requirement = {
+				kind = exactVersion;
+				version = 3.25.1;
+			};
+		};
 		E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/alandeguz/SwiftLintPlugin";
@@ -664,26 +695,18 @@
 				version = 0.5.0;
 			};
 		};
-		E09894CE28FE3C800002103F /* XCRemoteSwiftPackageReference "LicensePlistPlugin" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/alandeguz/LicensePlistPlugin";
-			requirement = {
-				kind = exactVersion;
-				version = 0.4.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E036E5CE2B2C0BDA009C4257 /* LicensePlistBuildTool */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E036E5CD2B2C0BC7009C4257 /* XCRemoteSwiftPackageReference "LicensePlist" */;
+			productName = "plugin:LicensePlistBuildTool";
+		};
 		E040B65728FE5EFE00EEC909 /* SwiftLint */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E040B65628FE5EEC00EEC909 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */;
 			productName = "plugin:SwiftLint";
-		};
-		E09894CF28FE3C8D0002103F /* LicensePlist */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E09894CE28FE3C800002103F /* XCRemoteSwiftPackageReference "LicensePlistPlugin" */;
-			productName = "plugin:LicensePlist";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

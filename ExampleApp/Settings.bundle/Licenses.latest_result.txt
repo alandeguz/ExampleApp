@@ -1,7 +1,7 @@
-name: LicensePlistPlugin, nameSpecified: LicensePlistPlugin, owner: alandeguz, version: 0.4.0, source: https://github.com/alandeguz/LicensePlistPlugin
+name: LicensePlist, nameSpecified: LicensePlist, owner: alandeguz, version: 3.25.1, source: https://github.com/alandeguz/LicensePlist
 
 name: SwiftLintPlugin, nameSpecified: SwiftLintPlugin, owner: alandeguz, version: 0.5.0, source: https://github.com/alandeguz/SwiftLintPlugin
 
-add-version-numbers: false
+add-version-numbers: true
 
-LicensePlist Version: 3.24.9
+LicensePlist Version: 3.25.1

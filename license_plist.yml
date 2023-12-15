@@ -1,0 +1,7 @@
+options:
+  xcodeprojPath: ExampleApp.xcodeproj
+  prefix: Licenses
+  singlePage: false
+  addVersionNumbers: true
+  suppressOpeningDirectory: true
+  sandboxMode: true
