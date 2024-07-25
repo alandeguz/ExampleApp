@@ -1,8 +1,5 @@
-included:
-  - ExampleApp
-  - ExampleAppTests
-  - ExampleAppUITests
 excluded:
+  - trailing_whitespace
 analyzer_rules:
   - unused_declaration
   - unused_import

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E03496F42C5046B100071C0C /* UnhingedEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03496F32C5046B100071C0C /* UnhingedEditView.swift */; };
+		E03496F52C5046B100071C0C /* RotatingDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03496F12C5046B100071C0C /* RotatingDotsView.swift */; };
+		E03496F62C5046B100071C0C /* StarAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03496F22C5046B100071C0C /* StarAnimationView.swift */; };
 		E08357F228FEF2FC00554E60 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E08357F428FEF2FC00554E60 /* Localizable.strings */; };
 		E09894C928FE3A0D0002103F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E09894C828FE3A0D0002103F /* Settings.bundle */; };
 		E0BC13B028FE0FDF002BAF2D /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BC13AF28FE0FDF002BAF2D /* ExampleApp.swift */; };
@@ -16,6 +19,8 @@
 		E0BC13C228FE0FE2002BAF2D /* ExampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BC13C128FE0FE2002BAF2D /* ExampleAppTests.swift */; };
 		E0BC13CC28FE0FE2002BAF2D /* ExampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BC13CB28FE0FE2002BAF2D /* ExampleAppUITests.swift */; };
 		E0BC13CE28FE0FE2002BAF2D /* ExampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BC13CD28FE0FE2002BAF2D /* ExampleAppUITestsLaunchTests.swift */; };
+		E0CA1CF02B5711030083CC65 /* Sqrt2Over2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA1CEF2B5711030083CC65 /* Sqrt2Over2View.swift */; };
+		E0CA1CF22B5713B40083CC65 /* RoundedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CA1CF12B5713B40083CC65 /* RoundedRectangleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E03496F12C5046B100071C0C /* RotatingDotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingDotsView.swift; sourceTree = "<group>"; };
+		E03496F22C5046B100071C0C /* StarAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarAnimationView.swift; sourceTree = "<group>"; };
+		E03496F32C5046B100071C0C /* UnhingedEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhingedEditView.swift; sourceTree = "<group>"; };
 		E08357F328FEF2FC00554E60 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E08357F528FEF34600554E60 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E09894C828FE3A0D0002103F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -52,6 +60,8 @@
 		E0BC13C728FE0FE2002BAF2D /* ExampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0BC13CB28FE0FE2002BAF2D /* ExampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAppUITests.swift; sourceTree = "<group>"; };
 		E0BC13CD28FE0FE2002BAF2D /* ExampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E0CA1CEF2B5711030083CC65 /* Sqrt2Over2View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sqrt2Over2View.swift; sourceTree = "<group>"; };
+		E0CA1CF12B5713B40083CC65 /* RoundedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectangleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,7 @@
 		E0BC13AE28FE0FDF002BAF2D /* ExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				E0CA1CEE2B5711030083CC65 /* Views */,
 				E0BC13AF28FE0FDF002BAF2D /* ExampleApp.swift */,
 				E0BC13B128FE0FDF002BAF2D /* ContentView.swift */,
 				E0BC13B328FE0FE2002BAF2D /* Assets.xcassets */,
@@ -138,6 +149,18 @@
 				E0BC13CD28FE0FE2002BAF2D /* ExampleAppUITestsLaunchTests.swift */,
 			);
 			path = ExampleAppUITests;
+			sourceTree = "<group>";
+		};
+		E0CA1CEE2B5711030083CC65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E03496F12C5046B100071C0C /* RotatingDotsView.swift */,
+				E03496F22C5046B100071C0C /* StarAnimationView.swift */,
+				E03496F32C5046B100071C0C /* UnhingedEditView.swift */,
+				E0CA1CEF2B5711030083CC65 /* Sqrt2Over2View.swift */,
+				E0CA1CF12B5713B40083CC65 /* RoundedRectangleView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +327,11 @@
 			files = (
 				E0BC13B228FE0FDF002BAF2D /* ContentView.swift in Sources */,
 				E0BC13B028FE0FDF002BAF2D /* ExampleApp.swift in Sources */,
+				E03496F42C5046B100071C0C /* UnhingedEditView.swift in Sources */,
+				E03496F52C5046B100071C0C /* RotatingDotsView.swift in Sources */,
+				E03496F62C5046B100071C0C /* StarAnimationView.swift in Sources */,
+				E0CA1CF02B5711030083CC65 /* Sqrt2Over2View.swift in Sources */,
+				E0CA1CF22B5713B40083CC65 /* RoundedRectangleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +525,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.ExampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -535,7 +563,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "-.ExampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
