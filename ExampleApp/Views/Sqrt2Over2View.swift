@@ -1,5 +1,5 @@
 //
-//  Group1.swift
+//  Sqrt2Over2View.swift
 //  ExampleApp
 //
 //  Created by Alan DeGuzman on 1/8/24.
@@ -66,7 +66,6 @@ struct Sqrt2Over2View: View {
 
         var body: some View {
             PathShape1()
-                .fill(Color(red: 0.0157, green: 0.0078, blue: 0.0157))
         }
     }
 
@@ -138,7 +137,6 @@ struct Sqrt2Over2View: View {
 
         var body: some View {
             PathShape2()
-                .fill(Color(red: 0.0157, green: 0.0078, blue: 0.0157))
         }
     }
 
@@ -168,7 +166,6 @@ struct Sqrt2Over2View: View {
 
         var body: some View {
             PathShape3()
-                .fill(Color(red: 0.0157, green: 0.0078, blue: 0.0157))
         }
     }
 
@@ -237,7 +234,6 @@ struct Sqrt2Over2View: View {
 
         var body: some View {
             PathShape4()
-                .fill(Color(red: 0.0157, green: 0.0078, blue: 0.0157))
         }
     }
 

@@ -27,10 +27,20 @@ extension RoundedRectangleView {
     }
 }
 
+private extension CGFloat {
+    static let corner: CGFloat = 80
+    static let width: CGFloat = 300
+    static let height: CGFloat = 300
+}
+
+private extension RectangleCornerRadii {
+    static let radii = RectangleCornerRadii(topLeading: .corner, bottomLeading: .corner, bottomTrailing: .corner, topTrailing: .corner)
+}
+
 #Preview {
     VStack {
-        RoundedRectangleView(cornerRadii: RectangleCornerRadii(topLeading: 80, bottomLeading: 80, bottomTrailing: 80, topTrailing: 80), style: .continuous)
-            .frame(width: 300, height: 300)
+        RoundedRectangleView(cornerRadii: .radii, style: .continuous)
+            .frame(width: .width, height: .height)
             .foregroundStyle(.yellow)
             .overlay(alignment: .center) {
                 Text("aad")
@@ -38,9 +48,9 @@ extension RoundedRectangleView {
 
             }
         Rectangle()
-            .frame(width: 300, height: 300)
+            .frame(width: .width, height: .height)
             .foregroundStyle(.orange)
-            .cornerRadius(80, antialiased: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+            .cornerRadius(.corner, antialiased: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
             .overlay(alignment: .center) {
                 Text("aad")
                     .font(.system(size: 72))

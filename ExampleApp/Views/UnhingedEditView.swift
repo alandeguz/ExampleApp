@@ -6,12 +6,11 @@
 //
 //  https://www.reddit.com/r/SwiftUI/comments/1e6jfaa/im_sorry_it_had_to_be_done/
 
-
 import SwiftUI
 
 struct UnhingedEditView: View {
-    @State var text : String
-    @State var rotationAngle : Angle = .degrees(0)
+    @State var text: String
+    @State var rotationAngle: Angle = .degrees(0)
     var body: some View {
         VStack {
             if #available(iOS 17.0, *) {
@@ -25,7 +24,7 @@ struct UnhingedEditView: View {
                 })
                 .textFieldStyle(.roundedBorder).frame(width: 180)
                 .rotationEffect(rotationAngle, anchor: .topTrailing)
-                .onChange(of: text) { oldValue, newValue in
+                .onChange(of: text) { _, newValue in
                     withAnimation(.interpolatingSpring(mass: 0.05, stiffness: 0.9, damping: 2.0, initialVelocity: 20)) {
                         rotationAngle = .degrees(max(-90, -Double(newValue.count * 8)))
                     }
@@ -37,8 +36,8 @@ struct UnhingedEditView: View {
     }
 }
 
-struct TestView : View {
-    @State var text : String
+struct TestView: View {
+    @State var text: String
     var body: some View {
         ZStack {
             Color.orange

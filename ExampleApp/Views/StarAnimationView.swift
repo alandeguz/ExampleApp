@@ -9,21 +9,20 @@
 
 import SwiftUI
 
-
 struct StarAnimationView: View {
-    
+
     @State private var timer: Timer?
     @State private var t: CGFloat = 0.0
-    
+
     var body: some View {
         Canvas { ctx, size in
             let layers: Int = 9
             let starsPerLayer: Int = 30
             for layer in 1...layers {
                 let cl = CGFloat(layer)
-                let scale = ((t/10) + cl / CGFloat(layers))
+                let scale = ((t / 10) + cl / CGFloat(layers))
                     .truncatingRemainder(dividingBy: 1)
-                let alpha = 1 - (cos (scale * (.pi * 2)) + 1) / 2.0
+                let alpha = 1 - (cos(scale * (.pi * 2)) + 1) / 2.0
                 let scalePlus = scale + 0.4
                 for i in 1...starsPerLayer {
                     let ci = CGFloat(i)
@@ -47,7 +46,7 @@ struct StarAnimationView: View {
         .background(Color.black)
         .ignoresSafeArea()
         .onAppear {
-            timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true)  { _ in
+            timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { _ in
                 t += 0.01
             }
         }
@@ -57,4 +56,3 @@ struct StarAnimationView: View {
 #Preview {
     StarAnimationView()
 }
-
