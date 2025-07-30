@@ -293,7 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"Will copy acknowledgements\"\nACKNOWLEDGEMENTS_DIR=${BUILT_PRODUCTS_DIR}/${CONTENTS_FOLDER_PATH}/com.mono0926.LicensePlist.Output\nDESTINATION_PATH=${SOURCE_ROOT}/ExampleApp/Settings.bundle/\n# copy withouut error\ncp \"${ACKNOWLEDGEMENTS_DIR}\"/Licenses/* \"${DESTINATION_PATH}\"/Licenses 2>/dev/null || :\ncp \"${ACKNOWLEDGEMENTS_DIR}\"/Licenses.* \"${DESTINATION_PATH}\" 2>/dev/null || :\nrm -rf \"${ACKNOWLEDGEMENTS_DIR}\" 2>/dev/null || :\n";
+			shellScript = "echo \"Will copy acknowledgements\"\nACKNOWLEDGEMENTS_DIR=${BUILT_PRODUCTS_DIR}/${CONTENTS_FOLDER_PATH}/com.mono0926.LicensePlist.Output\nDESTINATION_PATH=${SOURCE_ROOT}/ExampleApp/Settings.bundle/\nOTHER_DIR=${BUILD_DIR}/../Intermediates.noindex/BuildToolPluginIntermediates/ExampleApp.output/ExampleApp/LicensePlistBuildTool/com.mono0926.LicensePlist.Output \n\n# Function to count entries (including hidden files, excluding . and ..)\ncount_dir() {\n  shopt -s nullglob dotglob\n  local files=(\"$1\"/*)\n  echo ${#files[@]}\n}\n\ncount1=$(count_dir \"$ACKNOWLEDGEMENTS_DIR\")\ncount2=$(count_dir \"$OTHER_DIR\")\n\n# copy without error\n\nif [ \"$count1\" -eq 0 ] && [ \"$count2\" -eq 0 ]; then\n    echo \"Good-bye\"\n    exit 0\nfi\n\n# Decide which directory to copy from (prefer ACKNOWLEDGEMENTS_DIR on tie)\nif [ \"$count1\" -ge \"$count2\" ]; then\n    SRCCOPY=\"$ACKNOWLEDGEMENTS_DIR\"\nelse\n    SRCCOPY=\"$OTHER_DIR\"\nfi\n\n# Perform the copy\ncp -RfX \"$SRCCOPY\"/. \"$DESTINATION_PATH\" > /tmp/LicensePList_error.txt 2>&1\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -684,7 +684,7 @@
 			repositoryURL = "https://github.com/alandeguz/LicensePlist";
 			requirement = {
 				kind = exactVersion;
-				version = 3.25.1;
+				version = 3.27.1;
 			};
 		};
 		E0F09F482B2CBD4300C8BCDF /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
